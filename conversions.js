@@ -1,3 +1,11 @@
+"use strict";
+
+function milesToKm(miles) {
+  return miles * 1.609344;
+}
+function kmToMiles(kilometers) {
+  return kilometers * 0.621371192;
+
 
 function inchToCm(inches) {
   return inches * 2.54;
@@ -36,4 +44,5 @@ function gToL(gallons) {
 function lToG(liters) {
   const gallons = liters / 3.78541;
   return gallons;
+
 }
