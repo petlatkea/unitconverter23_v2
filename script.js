@@ -27,7 +27,7 @@ function inputChange() {
     }
 }
 
-function selectInput(inputvalue) {
+function selectInput(inputValue) {
     console.log(`input value: ${inputValue}`);
     setInputValue(inputValue);
     performConversion()
@@ -42,3 +42,12 @@ function performConversion() {
 }
 
 /* ********************************* */
+
+let input;
+
+function setInputValue(inputValue) {
+    input = inputValue
+}
+function getInputValue() {
+    return input
+}
