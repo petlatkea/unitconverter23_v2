@@ -1,10 +1,17 @@
 
+function inchToCm(inches) {
+  return inches * 2.54;
+}
+
+function cmToInch(centimeters) {
+  return centimeters * 0.3937;
 
 function fToC(fahrenheit) {
   const fht = ((fahrenheit - 32) * 5) / 9;
   console.log(fht);
   return fht;
 }
+
 function cToF(celcius) {
   const cel = (celcius * 9 / 5)+32;
   console.log(cel);
