@@ -29,11 +29,11 @@ function inputChange() {
   }
 }
 
-function selectInput(inputvalue) {
-  console.log(`input value: ${inputValue}`);
-  setInputValue(inputValue);
-  performConversion();
-}
+
+function selectInput(inputValue) {
+    console.log(`input value: ${inputValue}`);
+    setInputValue(inputValue);
+    performConversion()
 
 function performConversion() {
   const type = getConversionType();
@@ -45,7 +45,16 @@ function performConversion() {
 
 /* ********************************* */
 
-// (Svar på spørgsmål 1)
+
+let input;
+
+function setInputValue(inputValue) {
+    input = inputValue
+}
+function getInputValue() {
+    return input
+}
+
 let conversionType;
 
 function setConversionType(conversion) {
@@ -57,4 +66,3 @@ function getConversionType() {
   return conversionType;
 }
 
-// (Slut på svar)
