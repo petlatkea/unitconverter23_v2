@@ -1,9 +1,9 @@
-function lbsToKg(lbs) {
-  const kg = lbs / 2.20462;
-  return kg;
+function lbsToKg(pounds) {
+  const kilograms = lbs / 2.20462;
+  return kilograms;
 }
 
-function kgToLbs(kg) {
-  const lbs = kg * 2.20462;
-  return lbs;
+function kgToLbs(kilograms) {
+  const pounds = kg * 2.20462;
+  return pounds;
 }
