@@ -3,42 +3,66 @@
 window.addEventListener("load", start);
 
 function start() {
-    console.log("Unit Converter 23 is running");
-    document.querySelector("#conversiontype").addEventListener("change", conversionChange);
-    document.querySelector("#inputvalue").addEventListener("keyup", inputChange);
+  console.log("Unit Converter 23 is running");
+  document
+    .querySelector("#conversiontype")
+    .addEventListener("change", conversionChange);
+  document.querySelector("#inputvalue").addEventListener("keyup", inputChange);
 }
 
 function conversionChange() {
-    selectConversion(this.value);
+  selectConversion(this.value);
 }
 
 function selectConversion(conversion) {
-    console.log(`Selected conversion: ${conversion}`);
-    setConversionType(conversion);
-    displayInputUnit(conversion);
-    displayOutputUnit(conversion);
-    performConversion();
+  console.log(`Selected conversion: ${conversion}`);
+  setConversionType(conversion);
+  displayInputUnit(conversion);
+  displayOutputUnit(conversion);
+  performConversion();
 }
 
 function inputChange() {
-    if(this.value) {
-        // only accept valid inputs
-        selectInput(this.value);
-    }
+  if (this.value) {
+    // only accept valid inputs
+    selectInput(this.value);
+  }
 }
 
-function selectInput(inputvalue) {
+
+function selectInput(inputValue) {
     console.log(`input value: ${inputValue}`);
     setInputValue(inputValue);
     performConversion()
-}
 
 function performConversion() {
-    const type = getConversionType();
-    const value = getInputValue();
+  const type = getConversionType();
+  const value = getInputValue();
 
-    const result = convert(type,value);
-    displayOutputValue(result);
+  const result = convert(type, value);
+  displayOutputValue(result);
 }
 
 /* ********************************* */
+
+
+let input;
+
+function setInputValue(inputValue) {
+    input = inputValue
+}
+function getInputValue() {
+    return input
+}
+
+let conversionType;
+
+function setConversionType(conversion) {
+  conversionType = conversion;
+  return conversionType;
+}
+
+function getConversionType() {
+  return conversionType;
+}
+
